@@ -1,0 +1,27 @@
+# 忽略环境变量文件
+.env
+
+# Go构建产物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go测试覆盖率
+*.out
+
+# IDE配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
