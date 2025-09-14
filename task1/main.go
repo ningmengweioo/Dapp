@@ -11,6 +11,8 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind/v2"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/joho/godotenv"
@@ -66,7 +68,7 @@ func task1_transfer(done chan struct{}, PrivateKey string, sepoliaUrl string, ac
 	fmt.Printf("区块时间戳: %d\n", block.Time())
 
 	// 1. 从私钥获取发送方地址
-	/*privateKey, err := crypto.HexToECDSA(PrivateKey)
+	privateKey, err := crypto.HexToECDSA(PrivateKey)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -119,7 +121,7 @@ func task1_transfer(done chan struct{}, PrivateKey string, sepoliaUrl string, ac
 
 	// 8. 输出交易哈希值 0xb50ba091ec1b123e91de3fcfc97f76dcabd4db914ae3a07be9e1bb178c297440
 	fmt.Printf("交易哈希值: %s\n", signedTx.Hash().Hex())
-	*/
+
 	done <- struct{}{}
 }
 
